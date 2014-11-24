@@ -5,7 +5,7 @@ import {
 
 moduleForModel('partner', 'Partner', {
   // Specify the other units that are required for this test.
-  needs: ['model:guest-episode', 'model:host-episode']
+  needs: ['model:episode']
 });
 
 test('it exists', function() {

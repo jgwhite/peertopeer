@@ -1,9 +1,3 @@
 <h2 id='title'>Welcome to Peer to Peer</h2>
 
-<ul>
-  {{#each model as |episode|}}
-    <li>
-      {{link-to episode.challengeName "episode" episode}}
-    </li>
-  {{/each}}
-</ul>
+{{outlet}}

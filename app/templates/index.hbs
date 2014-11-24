@@ -1,7 +1,7 @@
 <ul>
-  {{#each model as |episode|}}
+  {{#each model.episodes as |episode|}}
     <li>
-      {{link-to episode.challenge_name "episode" episode}}
+      {{link-to episode.challengeName "episode" episode}}
     </li>
   {{/each}}
 </ul>

@@ -3,6 +3,6 @@ import ajax from 'ic-ajax';
 
 export default Ember.Route.extend({
   model: function() {
-    return ajax('/api/episodes.json')
+    return ajax('/api/episodes.json');
   }
 });

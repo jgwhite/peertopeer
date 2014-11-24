@@ -18,6 +18,6 @@ test('walking from Tom to Camille', function() {
   click('a:contains("Ranking poker hands")');
 
   andThen(function() {
-    equal(currentPath(), '/episodes/2');
+    equal(currentURL(), '/episodes/2');
   });
 });

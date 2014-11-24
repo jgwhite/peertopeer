@@ -6,5 +6,13 @@ export default DS.Model.extend({
   hostName: DS.attr('string'),
   posterFrameUrl: DS.attr('string'),
   guest: DS.belongsTo('partner', { inverse: 'guestEpisode' }),
-  host: DS.belongsTo('partner', { inverse: 'hostEpisodes' })
+  host: DS.belongsTo('partner', { inverse: 'hostEpisodes' }),
+
+  sequels: function() {
+    var guest = this.get('guest');
+
+    return this.store.filter('episode', { host: true }, function(episode) {
+      return episode.get('host') === guest;
+    });
+  }.property()
 });

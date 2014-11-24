@@ -7,7 +7,10 @@
       {{link-to prequel.challengeName "episode" prequel}}
     </li>
   {{else}}
-    <li><em>This episode is the start of a chain.</em></li>
+    <li>
+      <em>This episode is the start of a chain.</em>
+      {{link-to "See the root episodes" "index"}}
+    </li>
   {{/each}}
 </ul>
 
@@ -15,7 +18,10 @@
 <ul>
   {{#each model.sequels as |sequel|}}
     <li>
-      {{link-to sequel.challengeName "episode" sequel}}
+      {{#link-to "episode" sequel}}
+        {{sequel.challengeName}}
+        (featuring {{sequel.guest.name}})
+      {{/link-to}}
     </li>
   {{else}}
     <li><em>No sequels yet.</em></li>

@@ -1,0 +1,53 @@
+{
+    "partners": [
+        {
+            "id": 1,
+            "first_name": "Drew",
+            "last_name": "Neil",
+            "guest_episode": null,
+            "host_episodes": [1]
+        },
+        {
+            "id": 2,
+            "first_name": "Tom",
+            "last_name": "Stuart",
+            "guest_episode": 1,
+            "host_episodes": [2]
+        },
+        {
+            "id": 3,
+            "first_name": "Camille",
+            "last_name": "Baldock",
+            "guest_episode": 2,
+            "host_episodes": [5]
+        },
+        {
+            "id": 4,
+            "first_name": "Steve",
+            "last_name": "Purcell",
+            "guest_episode": null,
+            "host_episodes": [3]
+        },
+        {
+            "id": 5,
+            "first_name": "Ollie",
+            "last_name": "Charles",
+            "guest_episode": 3,
+            "host_episodes": [4]
+        },
+        {
+            "id": 6,
+            "first_name": "John",
+            "last_name": "Wiegley",
+            "guest_episode": 4,
+            "host_episodes": []
+        },
+        {
+            "id": 7,
+            "first_name": "Jamie",
+            "last_name": "White",
+            "guest_episode": 5,
+            "host_episodes": []
+        }
+    ]
+}

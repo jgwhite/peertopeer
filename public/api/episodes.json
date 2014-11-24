@@ -1,0 +1,49 @@
+{
+    "episodes": [
+        {
+            "id": 1,
+            "challenge_name": "Counting tree nodes",
+            "guest_name": "Tom Stuart",
+            "host_name": "Drew Neil",
+            "poster_frame_url": "http://peertopeer.io/images/tom-stuart/players.jpg",
+            "host_id": 1,
+            "guest_id": 2
+        },
+        {
+            "id": 2,
+            "challenge_name": "Ranking poker hands",
+            "guest_name": "Camille Baldock",
+            "host_name": "Tom Stuart",
+            "poster_frame_url": "http://peertopeer.io/images/camille-baldock/players.jpg",
+            "host_id": 2,
+            "guest_id": 3
+        },
+        {
+            "id": 3,
+            "challenge_name": "Solving word-chain puzzles",
+            "guest_name": "Ollie Charles",
+            "host_name": "Steve Purcell",
+            "poster_frame_url": "http://peertopeer.io/images/ollie-charles/players.jpg",
+            "host_id": 4,
+            "guest_id": 5
+        },
+        {
+            "id": 4,
+            "challenge_name": "Creating a basic calculator",
+            "guest_name": "John Wiegley",
+            "host_name": "Ollie Charles",
+            "poster_frame_url": "http://peertopeer.io/images/john-wiegley/players.jpg",
+            "host_id": 5,
+            "guest_id": 6
+        },
+        {
+            "id": 5,
+            "challenge_name": "Graphing collaborations",
+            "guest_name": "Jamie White",
+            "host_name": "Camille Baldock",
+            "poster_frame_url": "http://peertopeer.io/images/jamie-white/players.jpg",
+            "host_id": 3,
+            "guest_id": 7
+        }
+    ]
+}

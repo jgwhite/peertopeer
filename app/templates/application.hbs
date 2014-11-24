@@ -3,7 +3,15 @@
 <ul>
   {{#each episodes as |episode|}}
     <li>
-      {{episode.challenge_name}}
+      <img src={{episode.poster_frame_url}} width="360">
+      <dl>
+        <dt>Name</dt>
+        <dd>{{episode.challenge_name}}</dd>
+        <dt>Host</dt>
+        <dd>{{episode.host_name}}</dd>
+        <dt>Guest</dt>
+        <dd>{{episode.guest_name}}</dd>
+      </dl>
     </li>
   {{/each}}
 </ul>

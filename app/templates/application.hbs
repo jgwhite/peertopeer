@@ -1,17 +1,9 @@
 <h2 id='title'>Welcome to Peer to Peer</h2>
 
 <ul>
-  {{#each episodes as |episode|}}
+  {{#each model as |episode|}}
     <li>
-      <img src={{episode.poster_frame_url}} width="360">
-      <dl>
-        <dt>Name</dt>
-        <dd>{{episode.challenge_name}}</dd>
-        <dt>Host</dt>
-        <dd>{{episode.host_name}}</dd>
-        <dt>Guest</dt>
-        <dd>{{episode.guest_name}}</dd>
-      </dl>
+      {{link-to episode.challengeName "episode" episode}}
     </li>
   {{/each}}
 </ul>

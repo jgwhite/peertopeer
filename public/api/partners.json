@@ -12,7 +12,7 @@
             "first_name": "Tom",
             "last_name": "Stuart",
             "guest_episode": 1,
-            "host_episodes": [2]
+            "host_episodes": [2, 6]
         },
         {
             "id": 3,
@@ -25,7 +25,7 @@
             "id": 4,
             "first_name": "Steve",
             "last_name": "Purcell",
-            "guest_episode": null,
+            "guest_episode": 6,
             "host_episodes": [3]
         },
         {

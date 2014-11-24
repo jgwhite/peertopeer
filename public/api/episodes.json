@@ -44,6 +44,12 @@
             "poster_frame_url": "http://peertopeer.io/images/jamie-white/players.jpg",
             "host_id": 3,
             "guest_id": 7
+        },
+        {
+            "id": 6,
+            "challenge_name": "Invent a new monad",
+            "host_id": 2,
+            "guest_id": 4
         }
     ]
 }

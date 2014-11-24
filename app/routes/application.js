@@ -1,12 +1,11 @@
 import Ember from 'ember';
-import ajax from 'ic-ajax';
-import buildCollaborators from '../utils/build-collaborators';
+var RSVP = Ember.RSVP;
 
 export default Ember.Route.extend({
   model: function() {
-    return ajax('/api/episodes.json').then(function(data) {
-      var episodes = data.episodes;
-      return buildCollaborators(episodes);
+    return RSVP.hash({
+      episodes: this.store.find('episode'),
+      partners: this.store.find('partner')
     });
   }
 });

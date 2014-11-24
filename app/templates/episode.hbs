@@ -1,9 +1,23 @@
-{{outlet}}
+<h1>{{model.challengeName}}</h1>
 
+<h3>Prequel</h3>
+<ul>
+  {{#each model.prequels as |prequel|}}
+    <li>
+      {{link-to prequel.challengeName "episode" prequel}}
+    </li>
+  {{else}}
+    <li><em>This episode is the start of a chain.</em></li>
+  {{/each}}
+</ul>
+
+<h3>Sequels</h3>
 <ul>
   {{#each model.sequels as |sequel|}}
     <li>
       {{link-to sequel.challengeName "episode" sequel}}
     </li>
+  {{else}}
+    <li><em>No sequels yet.</em></li>
   {{/each}}
 </ul>

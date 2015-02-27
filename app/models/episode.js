@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+let { computed } = Ember;
 
 export default DS.Model.extend({
   challengeName: DS.attr('string'),
@@ -8,19 +9,15 @@ export default DS.Model.extend({
   guest: DS.belongsTo('partner', { inverse: 'guestEpisode' }),
   host: DS.belongsTo('partner', { inverse: 'hostEpisodes' }),
 
-  prequels: function() {
-    var host = this.get('host');
+  all: function() {
+    return this.store.all('episode');
+  }.property(),
 
-    return this.store.filter('episode', function(episode) {
-      return episode.get('guest') === host;
-    });
-  }.property('host'),
+  prequels: computed.filter('all.@each.guest', function(episode) {
+    return episode.get('guest') === this.get('host');
+  }),
 
-  sequels: function() {
-    var guest = this.get('guest');
-
-    return this.store.filter('episode', function(episode) {
-      return episode.get('host') === guest;
-    });
-  }.property('guest')
+  sequels: computed.filter('all.@each.host', function(episode) {
+    return episode.get('host') === this.get('guest');
+  })
 });

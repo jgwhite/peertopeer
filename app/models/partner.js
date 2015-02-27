@@ -1,10 +1,11 @@
 import DS from 'ember-data';
+let { attr, belongsTo, hasMany } = DS;
 
 export default DS.Model.extend({
-  firstName: DS.attr('string'),
-  lastName: DS.attr('string'),
-  guestEpisode: DS.belongsTo('episode', { inverse: 'guest' }),
-  hostEpisodes: DS.hasMany('episode', { inverse: 'host' }),
+  firstName: attr('string'),
+  lastName: attr('string'),
+  guestEpisode: belongsTo('episode', { inverse: 'guest' }),
+  hostEpisodes: hasMany('episode', { inverse: 'host' }),
 
   name: function() {
     return this.get('firstName') + ' ' + this.get('lastName');

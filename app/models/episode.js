@@ -19,5 +19,7 @@ export default DS.Model.extend({
 
   sequels: computed.filter('all.@each.host', function(episode) {
     return episode.get('host') === this.get('guest');
-  })
+  }),
+
+  isRoot: computed.empty('prequels')
 });

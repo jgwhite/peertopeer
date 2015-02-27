@@ -2,6 +2,6 @@
 
 <h2>Root Episodes</h2>
 
-{{#x-list items=model as |episode|}}
+{{#x-list items=model filterBy="isRoot" as |episode|}}
   {{link-to episode.challengeName "episode" episode}}
 {{/x-list}}

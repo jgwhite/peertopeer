@@ -2,6 +2,11 @@
 
 <h2>Root Episodes</h2>
 
-{{#x-list items=model filterBy="isRoot" as |episode|}}
+<p>
+  Filter by:
+  {{view "select" content=(list null "isRoot") value=selectedFilter}}
+</p>
+
+{{#x-list items=model filterBy=selectedFilter as |episode|}}
   {{link-to episode.challengeName "episode" episode}}
 {{/x-list}}

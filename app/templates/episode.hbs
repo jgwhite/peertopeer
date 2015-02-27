@@ -1,10 +1,18 @@
-<h1>{{model.challengeName}}</h1>
+<h1>
+  {{model.challengeName}}
+  ::
+  {{model.host.name}}
+  &rarr;
+  {{model.guest.name}}
+</h1>
 
 <h3>Prequel</h3>
 <ul>
   {{#each model.prequels as |prequel|}}
     <li>
-      {{link-to prequel.challengeName "episode" prequel}}
+      {{#link-to "episode" prequel}}
+        {{episode-link episode=prequel}}
+      {{/link-to}}
     </li>
   {{else}}
     <li>
@@ -19,8 +27,7 @@
   {{#each model.sequels as |sequel|}}
     <li>
       {{#link-to "episode" sequel}}
-        {{sequel.challengeName}}
-        (featuring {{sequel.guest.name}})
+        {{episode-link episode=sequel}}
       {{/link-to}}
     </li>
   {{else}}

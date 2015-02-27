@@ -3,5 +3,7 @@
 <h2>Root Episodes</h2>
 
 {{#x-list items=model filterBy="isRoot" as |episode|}}
-  {{link-to episode.challengeName "episode" episode}}
+  {{#link-to "episode" episode}}
+    {{episode-link episode=episode}}
+  {{/link-to}}
 {{/x-list}}

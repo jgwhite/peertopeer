@@ -1,9 +1,7 @@
 <h1>Peer to Peer</h1>
+
 <h2>Root Episodes</h2>
-<ul>
-  {{#each model as |episode|}}
-    <li>
-      {{link-to episode.challengeName "episode" episode}}
-    </li>
-  {{/each}}
-</ul>
+
+{{#x-list items=model as |episode|}}
+  {{link-to episode.challengeName "episode" episode}}
+{{/x-list}}

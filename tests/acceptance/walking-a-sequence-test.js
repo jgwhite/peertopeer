@@ -1,23 +1,24 @@
 import Ember from 'ember';
+import {module, test} from 'qunit';
 import startApp from '../helpers/start-app';
 
 var App;
 
 module('Acceptance: Walking a sequence', {
-  setup: function() {
+  beforeEach: function() {
     App = startApp();
   },
-  teardown: function() {
+  afterEach: function() {
     Ember.run(App, 'destroy');
   }
 });
 
-test('walking from Tom to Camille', function() {
+test('walking from Tom to Camille', function(assert) {
   visit('/');
   click('a:contains("Counting tree nodes")');
   click('a:contains("Ranking poker hands")');
 
   andThen(function() {
-    equal(currentURL(), '/episodes/2');
+    assert.equal(currentURL(), '/episodes/2');
   });
 });

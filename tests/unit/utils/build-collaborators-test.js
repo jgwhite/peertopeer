@@ -1,8 +1,10 @@
 import buildCollaborators from 'peertopeer/utils/build-collaborators';
 
+import {module, test} from 'qunit';
+
 module('buildCollaborators');
 
-test('it works', function() {
+test('it works', function(assert) {
   var episodes = [{
     id: 1,
     challenge_name: 'Counting tree nodes',
@@ -32,6 +34,6 @@ test('it works', function() {
   }];
 
 
-  deepEqual(actual, expected,
+  assert.deepEqual(actual, expected,
       'expected episodes to gain prequel/sequel data');
 });

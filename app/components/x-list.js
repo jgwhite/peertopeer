@@ -13,5 +13,6 @@ export default Ember.Component.extend({
     }
 
     defineProperty(this, 'presentableItems', fun);
+    this.notifyPropertyChange('presentableItems');
   }.observes('filterBy').on('init')
 });
